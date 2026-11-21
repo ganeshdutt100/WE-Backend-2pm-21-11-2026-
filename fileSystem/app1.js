@@ -7,12 +7,12 @@ const fs = require("fs");
 //   console.log(err);
 // }
 
-try {
-  fs.writeFileSync("code1.txt", "Sync Data ");
-  console.log("file written successfully ");
-} catch (err) {
-  console.log(err);
-}
+// try {
+//   fs.writeFileSync("code1.txt", "Sync Data ");
+//   console.log("file written successfully ");
+// } catch (err) {
+//   console.log(err);
+// }
 // fs.writeFile("code1.txt", "second class", (err) => {
 //   if (err) {
 //     console.error("file write Error", err);
@@ -27,3 +27,18 @@ try {
 //   }
 //   console.log("File Data  : ", data);
 // });
+
+// fs.rename("ExampleFile", "ExampleFile.txt", (err) => {
+//   if (err) {
+//     console.error("file write Error", err);
+//     return;
+//   }
+//   console.log("Rename successfully");
+// });
+fs.unlink("ExampleFile.txt", (err) => {
+  if (err) {
+    console.error("file write Error", err);
+    return;
+  }
+  console.log("file unlink successfully");
+});
